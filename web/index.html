@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+    <meta name="description" content="A new Flutter project." />
+
+    <!-- iOS meta tags & icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="iframe_side_ads" />
+    <link rel="apple-touch-icon" href="icons/Icon-192.png" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+
+    <title>iframe_side_ads</title>
+    <link rel="manifest" href="manifest.json" />
+
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      .full-height {
+        height: 100%;
+        width: 80%;
+      }
+      .ads-width {
+        height: 100%;
+        width: 10%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- This script installs service_worker.js to provide PWA functionality to
+       application. For more information, see:
+       https://developers.google.com/web/fundamentals/primers/service-workers -->
+
+    <body>
+      
+      <div class="ads-width" style="float: left;">
+        <body style="margin: 0px; padding: 0px; overflow: hidden;">
+          <iframe
+          src="side_panel_left.htm"
+          frameborder="0"
+          style="overflow: hidden; height: 100%; width: 100%;"
+          height="100%"
+          width="100%"
+        ></iframe>
+        </body>
+      </div>
+
+      <div class="full-height" style="float: left;">
+        <iframe
+          src="flutter_app.htm"
+          frameborder="0"
+          style="overflow: hidden; height: 100%; width: 100%;"
+          height="100%"
+          width="100%"
+        ></iframe>
+      </div>
+
+      <div class="ads-width" style="float: right;">
+        <body style="margin: 0px; padding: 0px; overflow: hidden;">
+          <iframe
+          src="side_panel_right.htm"
+          frameborder="0"
+          style="overflow: hidden; height: 100%; width: 100%;"
+          height="100%"
+          width="100%"
+        ></iframe>
+        </body>
+      </div>
+
+    </body>
+  </body>
+</html>
